@@ -1,23 +1,6 @@
 // Anthony Dike
 // March 17, 2018
 
-/*
-
-Constructor(aka initializer):
-- String first
-- String last
-- int height
-- int weight
-- int agility
-- int strength
-
-object methods:
-- fullName
-- offRating
-- defRating
-
-
-*/
 
 import java.text.MessageFormat;
 

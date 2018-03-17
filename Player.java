@@ -64,13 +64,13 @@ public class Player {
 
 	int offRating(int dribble, int jumpshot, int layup, int assist) {
 		int totalOffRating = dribble + jumpshot + layup + assist;
-		int avgOffRating = (int)((totalOffRating / 4) + (totalOffRating % 4));
+		int avgOffRating = (int)((totalOffRating / 4) + ((totalOffRating % 4) / 4));
 		return avgOffRating;
 	}
 
 	int defRating(int steal, int block){
 		int totalDefRating = steal + block;
-		int avgDefRating = (int)((totalDefRating / 2) + (totalDefRating % 2));
+		int avgDefRating = (int)((totalDefRating / 2) + ((totalDefRating % 2) / 2));
 		return avgDefRating;
 	}
 
@@ -104,5 +104,4 @@ public class Player {
 
 
 }
-
 

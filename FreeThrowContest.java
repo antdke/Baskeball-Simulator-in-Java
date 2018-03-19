@@ -92,9 +92,17 @@ public class FreeThrowContest {
 		String overtimeTeam2 = Integer.toString(OvertimeTeam2());
 
 		// First Player challenge: Free Throw Shooting
-
-		if 
-
+		
+		// random value range 1 - 100 if var shooting = 1
+		// every increase of shooting by 2 increases the min value in the random range by 20
+		
+		int maxShotsMade = 100; // max amount of free throws to be shot
+		int minShotsMade = 1;
+		
+		// something else has to be done here
+		for (int i = shooting; i <= maxShooting; i += 2){
+			int = shotsMade = rand.nextInt(maxShotsMade - minShotsMade) + (minShotsMade * (i * 10));
+		}
 
 
 
@@ -106,6 +114,7 @@ public class FreeThrowContest {
 		String first;
 		String last;
 		private int shooting = 1;
+		private int maxShooting = 10;
 
 		/* constructor */
 		public Player(){

@@ -82,7 +82,7 @@ public class FreeThrowContest {
 		Random rand = new Random();
 
 		// assign ints to team variables
-		Team1 = rand.nextInt(maxScore - minScore) + minScore;
+		Team1 = rand.nextInt(maxScore - minScore) + minScore; // Do i still need to  have this 
 		Team2 = rand.nextInt(maxScore - minScore) + minScore;
 
 		// convert int to string

@@ -90,7 +90,20 @@ public class FreeThrowContest {
 		String team2Value = Integer.toString(Team2);
 		String overtimeTeam1 = Integer.toString(OvertimeTeam1());
 		String overtimeTeam2 = Integer.toString(OvertimeTeam2());
+		
+		// This is needed, might have to erase above
+		
+		player1.freeThrow();
+		player2.freeThrow();
+		
+		
+		// need to display who won
 
+
+
+	}
+	
+	public int freeThrow {
 		// First Player challenge: Free Throw Shooting
 		
 		// random value range 1 - 100 if var shooting = 1
@@ -98,14 +111,19 @@ public class FreeThrowContest {
 		
 		int maxShotsMade = 100; // max amount of free throws to be shot
 		int minShotsMade = 1;
+		int shotsMade;
 		
+		/*/ WHat I wanna do: The higher shooting is the higher the min range of the random range is
 		// something else has to be done here
 		for (int i = shooting; i <= maxShooting; i += 2){
-			int = shotsMade = rand.nextInt(maxShotsMade - minShotsMade) + (minShotsMade * (i * 10));
+			shotsMade = rand.nextInt(maxShotsMade - minShotsMade) + (minShotsMade * (i * 10));
 		}
-
-
-
+		*/
+		
+		// second for loop that could work: WAIT what if I DONT NEED A FOR LOOP?
+		shotsMade = ((shooting / 2) * 10) + (int)(Math.random() * (shooting / 2) * 10)); //Might have to be in own meth
+			
+		return shotsMade;
 	}
 
 	public class Player {
@@ -138,6 +156,10 @@ public class FreeThrowContest {
 		int setShooting(int newShooting){
 			shooting = newShooting;
 			return shooting;
+		}
+		
+		void score(){ // used to have each object keep track of its score
+		
 		}
 
 	}

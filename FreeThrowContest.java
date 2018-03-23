@@ -74,36 +74,65 @@ public class FreeThrowContest {
 
 
 	public static void Game(){
-		// initialize
+		/*/ initialize
 		int maxScore = 20;
 		int minScore = 0;
+
+		// assign ints to team variables
+		Team1 = rand.nextInt(maxScore - minScore) + minScore; // Do i still need to  have this 
+		Team2 = rand.nextInt(maxScore - minScore) + minScore; */
 
 		// random class
 		Random rand = new Random();
 
-		// assign ints to team variables
-		Team1 = rand.nextInt(maxScore - minScore) + minScore; // Do i still need to  have this 
-		Team2 = rand.nextInt(maxScore - minScore) + minScore;
-
 		// convert int to string
-		String team1Value = Integer.toString(Team1);
-		String team2Value = Integer.toString(Team2);
-		String overtimeTeam1 = Integer.toString(OvertimeTeam1());
-		String overtimeTeam2 = Integer.toString(OvertimeTeam2());
+		String player1ScoreString = Integer.toString(player1Score);
+		String player2ScoreString = Integer.toString(player2Score);
+		//String overtimeTeam1 = Integer.toString(OvertimeTeam1());
+		//String overtimeTeam2 = Integer.toString(OvertimeTeam2());
 		
 		// This is needed, might have to erase above
 		
 		player1.freeThrow();
 		player2.freeThrow();
+
+		int player1Wins;
+		int player2Wins;
 		
 		
 		// need to display who won
+		int player1Score = player1.freeThrow();
+		int player2Score = player2.freeThrow();
 
+		if (player1Score > player2Score) {
+			System.out.println("Player1 won the free throw contest!");
+			System.out.println("Player1 had a score of " + player1ScoreString);
+			System.out.println("Player2 scored " + player2ScoreString);
+			player1Wins++;
 
+		} else {
+			System.out.println("Player2 won the free throw contest!");
+			System.out.println("Player2 had a score of " + player2ScoreString);
+			System.out.println("Player1 scored " + player1ScoreString);
+			player2Wins++;
+		}
 
+		System.out.println();
+
+		//int player1Wins = player1.score();
+		//int player2Wins = player2.score();
+
+		String player1WinsString = Integer.toString(player1Wins);
+		String player2WinsString = Integer.toString(player2Wins);
+
+		System.out.println("Player1 wins: " + player1WinsString);
+		System.out.println("Player2 wins: " + player2WinsString);
+		gameCounter++; 
+
+		System.out.println();
 	}
 	
-	public int freeThrow {
+	public int freeThrow(){
 		// First Player challenge: Free Throw Shooting
 		
 		// random value range 1 - 100 if var shooting = 1
@@ -121,18 +150,20 @@ public class FreeThrowContest {
 		*/
 		
 		// second for loop that could work: WAIT what if I DONT NEED A FOR LOOP?
-		shotsMade = ((shooting / 2) * 10) + (int)(Math.random() * (shooting / 2) * 10)); //Might have to be in own meth
+		//Might have to be in own meth
+		shotsMade = ((shooting / 2) * 10) + (int)(Math.random() * (shooting / 2) * 10); 
 			
 		return shotsMade;
 	}
 
-	public class Player {
+	class Player {
 
 		// data fields
 		String first;
 		String last;
 		private int shooting = 1;
 		private int maxShooting = 10;
+		int gameCounter = 0;
 
 		/* constructor */
 		public Player(){
@@ -158,11 +189,9 @@ public class FreeThrowContest {
 			return shooting;
 		}
 		
-		void score(){ // used to have each object keep track of its score
-		
-		}
-
+		/*void score(){ // used to have each object keep track of its score
+			
+		}*/
 	}
-
 }
 
